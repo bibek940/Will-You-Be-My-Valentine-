@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffc0cb; /* Pink background */
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .heart {
+            font-size: 100px;
+            color: red;
+            margin-bottom: 20px;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #333;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <div class="text">
+            I don't know what I wanna write or do, but I just wanted to make you feel special because that's what you always make me feel. People say their love changes them, makes them a better person, and I agree too, but in my case, I feel you made me not change at all. Yeah, I feel you stopped me from changing myself, which I was doing so rapidly, and made me a stable person.
+            <br><br>
+            I didn't exactly know who I was or what I even was. You made me see myself and helped me understand myself. Now I feel like to some extent, I know myself. I know who and what I really wanna be. I wanna be yours. I wanna be yours, Miss Mannat.
+            <br><br>
+            I know I have said this many times now, but I wanna say this to you all my life. On every occasion, on every festival, every day, every time my eyes meet yours, I wanna say to you, "I love you." I love you, Miss Mannat.
+            <br><br>
+            I know I have never even proposed to you properly, and you have not even seen me properly, and asking for a commitment is too much. And you know I don't even want our relationship to be like others where one person's love has , and the other is just holding them up. I want us to be friends. Partners. Lovers. I want us to share things. I want us to be each other's first person to come in mind when they make a mess, when they accomplish something.
+            <br><br>
+            I don't want you to be with me because of a commitment that you made when you were a 15-year-old kid and regretting in your twenties. I will make sure to make you feel the same about us then too, like I do now, and for you to stay with me because you want to. And it's human nature to have attraction towards more than one person, and I know at some point we both are gonna have these, and this is the point where most relationships break. I would want us, in this situation, to come up and accept that maybe there is an attraction, but that doesn't define that we love each other less now, and to remember that.
+            <br><br>
+            There is this quote, "You can't control what will happen in your life, but you can control your attitude towards it." Attraction is natural, but to accept that it's just an attraction and to not act upon it and especially not cheat your partner is what makes us a person of morals and characters. And I know that we are gonna fight all problems together and strong.
+            <br><br>
+            I don't really believe in this Valentine's Day and all, but I would still wanna do every single thing with you. And so this mister of yours now kneels on his knees and asks you: Will you be his valentine? Will you be my valentine, Miss Mannat?
+        </div>
+        <div class="buttons">
+            <button class="button" id="yesButton">Yes</button>
+            <button class="button" id="noButton">No</button>
+        </div>
+        <div id="catImage" class="hidden">
+            <img src="https://placekitten.com/400/300" alt="Cute Cat" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+            <p style="font-size: 24px; color: #333;">Love You! ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        const yesButton = document.getElementById('yesButton');
+        const catImage = document.getElementById('catImage');
+
+        noButton.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        yesButton.addEventListener('click', () => {
+            catImage.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
